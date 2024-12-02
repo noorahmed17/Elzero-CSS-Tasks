@@ -1,0 +1,180 @@
+/* TASK 28 */
+.container div {
+  margin: 20px auto;
+  width: 300px;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 20px;
+  background-color: #eee;
+  color: black;
+}
+.one {
+  background-color: rgb(238, 238, 238, 0.1);
+}
+.two {
+  opacity: 0.1;
+}
+
+/* TASK 30 */
+.container-2 {
+  margin: 0 auto;
+  width: 200px;
+  height: 200px;
+}
+.container-2 div {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+.green {
+  background-color: green;
+  z-index: 2;
+  margin: 30px 0 0 30px;
+}
+.red {
+  background-color: #ef4135;
+  margin: 40px 0 0 40px;
+  z-index: 3;
+}
+.blue {
+  background-color: #0590c7;
+  margin: 20px 0 0 20px;
+  z-index: 1;
+}
+.black {
+  background-color: black;
+  margin: 30px 0 30px 20px;
+  z-index: -1;
+}
+
+/* TASK 31 */
+.parent {
+  width: 400px;
+  background-color: #eee;
+  padding: 10px;
+  margin: 50px 50px;
+  text-align: center;
+  border: 2px solid;
+  border-color: #ef4135 #0590c7;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  margin: 20px auto;
+}
+.top-left {
+  color: white;
+  position: absolute;
+  background-color: #0590c7;
+  padding: 5px 15px;
+  border-right: 2px solid #ef4135;
+  top: -15px;
+  left: -20px;
+}
+.bottom-left {
+  color: white;
+  position: absolute;
+  background-color: #0590c7;
+  padding: 5px 15px;
+  border-right: 2px solid #ef4135;
+  bottom: -15px;
+  left: -20px;
+}
+.top-right {
+  color: white;
+  position: absolute;
+  background-color: #0590c7;
+  padding: 5px 15px;
+  border-left: 2px solid #ef4135;
+  top: -15px;
+  right: -20px;
+}
+.bottom-right {
+  color: white;
+  position: absolute;
+  background-color: #0590c7;
+  padding: 5px 15px;
+  border-left: 2px solid #ef4135;
+  bottom: -15px;
+  right: -20px;
+}
+
+/* TASK 32 */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+.main {
+  width: 400px;
+  margin: 0 auto;
+}
+.html,
+.css,
+.JS {
+  background-color: #eee;
+  padding: 5px;
+  margin-bottom: 20px;
+  list-style: none;
+}
+.html-items,
+.css-items {
+  background-color: white;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  padding: 5px;
+}
+.js-ul {
+  padding-left: 0;
+}
+.js-items {
+  background-color: white;
+  list-style-position: inside;
+  margin-bottom: 5px;
+  margin-top: 10px;
+  padding: 5px;
+}
+
+/* TASK 33 */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+table {
+  margin: 0 auto;
+  width: 700px;
+}
+caption {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+th {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  width: 700px;
+}
+.Name {
+  width: 900px;
+}
+.Control {
+  width: 800px;
+}
+td {
+  text-align: center;
+  background-color: #eee;
+  padding: 20px;
+}
+img {
+  width: 70%;
+  height: 70%;
+}
+span {
+  display: inline-block;
+  /* padding: 2px; */
+}
+.span-blue {
+  color: white;
+  background-color: #3db4eb;
+  padding: 2px 5px;
+}
+.pink {
+  color: white;
+  background-color: #ff4081;
+  padding: 2px 5px;
+}

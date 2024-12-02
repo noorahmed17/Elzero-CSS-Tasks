@@ -1,0 +1,512 @@
+* {
+  box-sizing: border-box;
+}
+/* TASK 74 */
+.container {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+  border: 5px solid;
+  border-radius: 50%;
+  border-color: #eea231 #eea231 #eea231 transparent;
+  animation-name: first-anime;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+}
+.container:hover {
+  animation-play-state: paused;
+}
+.container::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  left: 5px;
+  top: 5px;
+  border: 5px solid;
+  border-radius: 50%;
+  border-color: #3db4eb transparent #3db4eb #3db4eb;
+}
+.container::before {
+  content: "";
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  left: 15px;
+  top: 15px;
+  border: 5px solid;
+  border-radius: 50%;
+  border-color: #ff4081 #ff4081 transparent #ff4081;
+}
+@keyframes first-anime {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+/* TASK 75 */
+.container-2 {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  position: relative;
+  border: 7px solid;
+  border-radius: 50%;
+  border-color: black black transparent black;
+  animation-name: second-anime;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+  animation-duration: 8s;
+}
+.container-2::after {
+  content: "";
+  position: absolute;
+  width: 75%;
+  height: 75%;
+  left: 4px;
+  top: 4px;
+  border: 7px solid;
+  border-radius: 50%;
+  border-color: #eea231 #eea231 transparent #eea231;
+  animation-name: second-anime;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+  animation-duration: 4s;
+}
+.container-2::before {
+  content: "";
+  width: 50%;
+  height: 50%;
+  left: 15px;
+  top: 15px;
+  position: absolute;
+  border: 7px solid;
+  border-radius: 50%;
+  border-color: #3db4eb #3db4eb transparent;
+  animation-name: second-anime;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-play-state: paused;
+  animation-duration: 1s;
+}
+@keyframes second-anime {
+  from {
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+.container-2:hover,
+.container-2:hover::after,
+.container-2:hover::before {
+  animation-play-state: running;
+}
+
+/* TASK 76 */
+span {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border: 10px solid;
+  border-radius: 50%;
+  border-color: black black transparent black;
+  background-color: #eee;
+  display: block;
+  animation-name: first-anime;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 1s;
+}
+
+/* TASK 77 */
+.anime {
+  width: 500px;
+  height: 450px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 250px);
+  gap: 15px;
+  position: relative;
+}
+.letter-E div,
+.letter-L div {
+  background-color: black;
+}
+.letter-E,
+.letter-L {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  grid-template-rows: repeat(7, 60px);
+}
+.one {
+  grid-area: 1 / 1 / 2 / 5;
+}
+.two {
+  grid-area: 2 / 1 / 4 / 2;
+}
+.three {
+  grid-area: 4 / 1 / 5 / 5;
+}
+.four {
+  grid-area: 5 / 1 / 8 / 2;
+}
+.five {
+  grid-area: 7 / 1 / 8 / 5;
+}
+.six {
+  grid-area: 1 / 1 / 8 / 2;
+}
+.seven {
+  grid-area: 7 / 1 / 8 / 5;
+}
+.anime::after {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  left: 185px;
+  top: 5px;
+  background-color: #eea231;
+  animation-name: move-e;
+  animation-timing-function: linear;
+  animation-duration: 6s;
+}
+.anime::before {
+  content: "";
+  position: absolute;
+  width: 10%;
+  height: 10%;
+  bottom: 40px;
+  right: 0px;
+  background-color: #eea231;
+  opacity: 0;
+  animation-name: move-l;
+  animation-timing-function: linear;
+  animation-delay: 6s;
+  animation-duration: 4s;
+}
+@keyframes move-e {
+  0% {
+    left: 185px;
+    top: 5px;
+  }
+  10% {
+    left: 5px;
+    top: 5px;
+  }
+  20% {
+    left: 5px;
+    top: 185px;
+  }
+  30% {
+    top: 185px;
+    left: 185px;
+  }
+  40% {
+    top: 185px;
+    left: 5px;
+  }
+  50% {
+    left: 5px;
+    top: 370px;
+  }
+  60% {
+    top: 365px;
+    left: 185px;
+  }
+  70% {
+    top: 365px;
+    left: 5px;
+  }
+  80% {
+    top: 5px;
+    left: 5px;
+  }
+  100% {
+    left: 185px;
+    top: 5px;
+  }
+}
+@keyframes move-l {
+  0% {
+    bottom: 40px;
+    right: 0px;
+    opacity: 0;
+  }
+  20% {
+    bottom: 40px;
+    right: 0px;
+    opacity: 1;
+  }
+  40% {
+    bottom: 40px;
+    right: 180px;
+    opacity: 1;
+  }
+  60% {
+    right: 180px;
+    bottom: 400px;
+    opacity: 1;
+  }
+  80% {
+    right: 180px;
+    bottom: 400px;
+    opacity: 1;
+  }
+  100% {
+    bottom: 400px;
+    right: 180px;
+    opacity: 0;
+  }
+}
+
+/* TASK 78 */
+.selectors-1,
+.selectors-2,
+.selectors-3,
+.selectors-4,
+.selectors-5,
+.selectors-6,
+.parent-2,
+.parent-3,
+.baby,
+.child {
+  font-size: 25px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.selectors-1 > div.main.red {
+  color: red;
+}
+
+/* TASK 79 */
+.parent-2:nth-of-type(5) > .child:nth-of-type(2) {
+  color: red;
+}
+
+/* TASK 80 */
+.parent-3:nth-of-type(9) > div {
+  color: red;
+}
+
+/* TASK 81 */
+.selectors-2 > [title="Elzero"]:nth-child(4),
+div[title="Hello"],
+div[title="HTML"] {
+  color: red;
+}
+
+/* TASK 82 */
+.selectors-3:nth-of-type(14) > div {
+  color: red;
+}
+
+/* TASK 83 */
+.selectors-4:nth-of-type(19) > div:nth-child(3),
+.selectors-4:nth-of-type(20) > div:nth-child(4) {
+  color: red;
+}
+
+/* TASK 84 */
+.selectors-5:nth-of-type(22) > div:nth-child(5) {
+  color: red;
+}
+
+/* TASK 85 */
+.selectors-6 > :not(h3):not(:first-child):not(:last-child) {
+  color: red;
+}
+
+/* TASK 86 */
+@media print {
+  .assign-one {
+    font-size: 40px;
+  }
+}
+
+/* TASK 87 */
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.product {
+  background-color: #eee;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  flex: 1 1 200px;
+}
+.product h3 {
+  font-weight: none;
+  color: lightseagreen;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .product-container {
+    justify-content: space-between;
+  }
+  .product {
+    flex: 1 1 calc(50% - 30px);
+  }
+  .product h3 {
+    color: red;
+  }
+}
+@media (max-width: 767px) {
+  .product-container {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .product {
+    flex: 1 1 calc(50% - 10px);
+  }
+  .product h3 {
+    color: black;
+  }
+}
+
+/* TASK 88 */
+.product-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.product-container2 div {
+  background-color: #eee;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+}
+.product2-1 {
+  flex: 1 1 100%;
+}
+.product2-2,
+.product2-3 {
+  flex: 1 1 45%;
+}
+.product2-4 {
+  flex: 1 1 100%;
+}
+.product-container2 div h3 {
+  font-weight: none;
+  color: lightseagreen;
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .product-container2 {
+    justify-content: space-between;
+  }
+  .product2-1 {
+    flex: 1 1 100%;
+  }
+  .product2-2,
+  .product2-3,
+  .product2-4 {
+    flex: 1 1 30%;
+  }
+  .product-container2 div h3 {
+    color: red;
+  }
+}
+@media (max-width: 767px) {
+  .product-container2 {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .product-container2 div h3 {
+    color: black;
+  }
+}
+
+/* TASK 88 */
+.framework {
+  font-family: Arial, Helvetica, sans-serif;
+  width: 50%;
+}
+.framework div {
+  background-color: #eee;
+  margin: 10px;
+  padding: 10px;
+}
+.center-flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.center-position {
+  margin: 0 auto;
+}
+.circle-100 {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.circle-200 {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+}
+
+/* TASK 90 */
+.global-values {
+  width: 400px;
+  height: 300px;
+  margin: 20px auto;
+}
+.global-values .arrow {
+  background-color: #eee;
+  margin: 25px;
+  padding: 20px;
+  font-size: 24px;
+  position: relative;
+}
+.top::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(0% - 20px);
+  border: 20px solid;
+  border-color: transparent transparent #eee;
+  transform: translate(-50%, -50%);
+}
+.right::after {
+  content: "";
+  position: absolute;
+  top: calc(80% - 20px);
+  right: -60px;
+  border: 20px solid;
+  border-color: transparent transparent transparent #eee;
+  transform: translate(-50%, -50%);
+}
+.bottom::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 20px);
+  border: 20px solid;
+  border-color: #eee transparent transparent;
+  transform: translate(-50%, -50%);
+}
+.left::after {
+  content: "";
+  position: absolute;
+  top: calc(80% - 20px);
+  left: -20px;
+  border: 20px solid;
+  border-color: transparent #eee transparent transparent;
+  transform: translate(-50%, -50%);
+}

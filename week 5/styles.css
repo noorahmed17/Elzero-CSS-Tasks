@@ -1,0 +1,286 @@
+/* :root {
+  --mainColor: #009688;
+  --mainPadding: 10px;
+} */
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* TASK 42 */
+.container {
+  top: 0;
+  width: 300px;
+  height: 100px;
+  background-color: #eee;
+  padding: 30px;
+  position: relative;
+  transition: top 0.5s ease;
+  margin-bottom: 50px;
+}
+.go-up {
+  position: absolute;
+  top: 0;
+  left: 50px;
+}
+.child {
+  position: absolute;
+  background-color: #cdc9c987;
+  width: 300px;
+  text-align: center;
+  left: 30px;
+  margin-top: 20px;
+  top: 20px;
+  transition: top 0.5s ease;
+}
+.container:hover {
+  top: 20px;
+}
+.child:hover {
+  top: 40px;
+}
+
+/* TASK 43 */
+.container-2 {
+  width: 400px;
+  font-size: 20px !important;
+  background-color: #eee !important;
+  color: black !important;
+  border: none !important;
+  text-indent: -9999px;
+  position: relative;
+}
+.container-2::after {
+  position: absolute;
+  content: "Elzero";
+  top: 0;
+  left: 160px;
+  text-indent: 0;
+  padding: 20px;
+  color: black;
+}
+
+/* TASK 44 */
+.container-3 div {
+  color: var(--mainColor, red);
+  padding: var(--mainPadding, 10px);
+  border: 3px solid var(--mainColor, black);
+  margin: 10px;
+  width: 200px;
+}
+
+/* TASK 46 */
+.container-2-1 {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  background-color: #eee;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+  color: #ff5900;
+  box-shadow: 5px 0 0 0 #ff5900, -5px 0 0 0 rgb(1, 130, 205);
+}
+
+/* TASK 47 */
+.parent {
+  width: 600px;
+  height: 300px;
+  margin: 0 auto;
+  background-color: #eee;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  align-content: space-between;
+}
+.parent div {
+  background-color: rgb(247, 65, 65);
+  color: white;
+  width: 28%;
+  height: 5%;
+  margin: 1%;
+  padding: 10px;
+  text-align: center;
+}
+
+/* TASK 48 */
+.parent-2 {
+  width: 600px;
+  height: 300px;
+  padding: 10px;
+  margin: 10px auto;
+  background-color: #eee;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+.parent-2 div {
+  width: calc(95% / 3);
+  height: 50%;
+  background-color: #597d8c;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parent-2 .one {
+  height: 40px;
+  order: 6;
+  align-self: flex-end;
+}
+.parent-2 .two {
+  order: 5;
+}
+.parent-2 .three {
+  height: 40px;
+  order: 3;
+}
+.parent-2 .four {
+  order: 3;
+}
+.parent-2 .five {
+  order: 4;
+}
+.parent-2 .sex {
+  order: 1;
+}
+
+/* TASK 49 */
+.parent-3 {
+  width: 600px;
+  height: 300px;
+  padding: 10px;
+  margin: 10px auto;
+  background-color: #eee;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+.parent-3 div {
+  background-color: rgb(3, 146, 127);
+  color: white;
+  height: (95% / 3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.parent-3 .one-2 {
+  height: 70px;
+  width: 20px;
+  align-self: flex-end;
+  padding: 10px;
+}
+.parent-3 .two-2 {
+  height: 70px;
+  width: 50%;
+}
+.parent-3 .three-2 {
+  height: 70px;
+  width: 20px;
+  align-self: flex-end;
+  padding: 10px;
+}
+
+/* TASK 50 */
+.parent-4 {
+  width: 600px;
+  height: 300px;
+  padding: 10px;
+  margin: 10px auto;
+  background-color: #eee;
+  display: flex;
+  justify-content: space-between;
+}
+.parent-4 div {
+  width: calc(50% / 3);
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.parent-4 .one-3 {
+  background-color: #f0702b;
+  order: 0;
+}
+.parent-4 .two-3 {
+  background-color: #3bf056;
+  align-self: flex-end;
+}
+.parent-4 .three-3 {
+  background-color: #9a4511;
+  order: 3;
+}
+.parent-4 .four-3 {
+  background-color: #a134f4;
+  align-self: flex-end;
+  order: -1;
+}
+
+/* TASK 51 */
+
+/* This part is highlithed in order not to affect the rest of the file */
+/* :root {
+  --background-color: #ccc;
+  --margin: 10px;
+  --padding: 10px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+.page {
+  height: 100vh;
+  background-color: #eee;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+.logo,
+.links {
+  background-color: var(--background-color);
+  margin: var(--margin);
+  padding: var(--padding);
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  width: calc(100% / 6);
+  height: 40px;
+}
+.logo {
+  align-items: center;
+}
+.links {
+  flex-grow: 1;
+  justify-content: flex-end;
+}
+li {
+  padding: var(--padding);
+  list-style-type: none;
+}
+.main-area {
+  display: flex;
+  justify-content: space-between;
+  height: 80%;
+}
+.content,
+.sidebar {
+  display: flex;
+  width: calc(100% / 2);
+  background-color: var(--background-color);
+  margin: var(--margin);
+  padding: var(--padding);
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--background-color);
+  margin: var(--margin);
+  padding: var(--padding);
+}

@@ -1,0 +1,228 @@
+/* TASK 65 */
+.container {
+  width: 300px;
+  height: 200px;
+  margin: 30px auto;
+  background-color: #eee;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  color: #3db4eb;
+  font-weight: bold;
+  position: relative;
+}
+.container::before {
+  content: "";
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  background-color: #ff4081;
+  z-index: -1;
+}
+.container::after {
+  content: "";
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  background-color: #3db4eb;
+  z-index: -1;
+}
+.container::after {
+  transform: scaleX(1) rotate(-5deg);
+}
+.container::before {
+  transform: scaleX(1) rotate(5deg);
+}
+
+/* TASK 66 */
+.container-2 {
+  width: 200px;
+  height: 200px;
+  margin: 30px auto;
+  background-color: #eee;
+  font-size: 27px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.249);
+  border-radius: 50%;
+  position: relative;
+}
+.container-2::before {
+  content: "";
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  border: 10px solid;
+  border-radius: 50%;
+  border-color: #ff4081 #ff4081 #ff4081 transparent;
+}
+.container-2::after {
+  content: "";
+  width: 220px;
+  height: 220px;
+  position: absolute;
+  border: 10px solid;
+  border-radius: 50%;
+  border-color: #3db4eb #3db4eb #3db4eb transparent;
+  transform: rotate(180deg);
+  transition: transform 0.5s ease;
+}
+.container-2::after {
+  transform: rotate(180deg);
+}
+
+/* TASK 66 */
+.on--hover:hover::after {
+  transform: rotate(0deg);
+}
+.on--hover:hover::before {
+  transform: rotate(180deg);
+  transition: transform 0.5s ease;
+}
+
+/* TASK 68 */
+.container-3 {
+  width: 150px;
+  margin: 20px auto;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff5522;
+  color: white;
+  position: relative;
+}
+.container-3::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  background-color: #ff5522;
+  transform: skewX(20deg) rotate(10deg);
+  z-index: -1;
+}
+.container-3::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  background-color: #ff5522;
+  transform: skewX(-20deg) rotate(-10deg);
+  z-index: -1;
+}
+
+/* TASK 70 */
+.container-4 {
+  width: 150px;
+  margin: 20px auto;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0a9874;
+  color: white;
+  position: relative;
+}
+.container-4::before {
+  content: "";
+  top: 0;
+  left: -10px;
+  width: 20px;
+  height: 99%;
+  background-color: #0a9874;
+  position: absolute;
+  transform: skew(15deg);
+}
+
+.container-4::after {
+  content: "";
+  top: 0;
+  left: -30px;
+  width: 15px;
+  height: 99%;
+  background-color: #0a9874;
+  position: absolute;
+  transform: skew(15deg);
+}
+
+/* TASK 71 */
+.container-5 {
+  width: 200px;
+  height: 200px;
+  margin: 100px auto 0;
+  background-color: #5b7788;
+  position: relative;
+  border-bottom: 5px solid black;
+}
+.container-5::after {
+  content: "";
+  position: absolute;
+  width: 69%;
+  height: 69%;
+  top: -70px;
+  transform: translate(20%) rotate(45deg);
+  background-color: black;
+  border-bottom: 5px solid white;
+  border-right: 5px solid white;
+}
+.container-5::before {
+  content: "Elzero";
+  position: absolute;
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  bottom: 7px;
+  left: 7px;
+}
+
+/* TASK 72 */
+.container-6 {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  background-color: #ff4081;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+.container-6::after {
+  content: "Front";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ff4081;
+  backface-visibility: hidden;
+}
+.container-6::before {
+  content: "Back";
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #3db4eb;
+  transform: rotateY(180deg);
+}
+.container-6:hover {
+  transform: rotateY(180deg);
+}
+.on-x::before {
+  transform: rotateX(180deg);
+}
+.on-x:hover {
+  transform: rotateX(180deg);
+}

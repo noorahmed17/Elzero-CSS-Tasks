@@ -1,0 +1,212 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+/* TASK 34 */
+.box,
+.middle {
+  margin: 0 auto;
+  width: 300px;
+  height: 60px;
+  background-color: #eee;
+  text-align: center;
+  line-height: 60px;
+}
+.middle {
+  background-color: red;
+}
+.box:nth-child(1) {
+  margin-bottom: 10px;
+}
+.box:nth-last-child(1) {
+  margin-top: 10px;
+}
+
+/* TASK 35 */
+.parent-2 {
+  margin: 0 auto;
+  width: 290px;
+  background-color: #eee;
+  text-align: left;
+  padding: 10px;
+}
+.parent-2::before {
+  position: relative;
+  content: "1";
+  background-color: red;
+  border: 1px solid red;
+  padding: 3px;
+  left: -16px;
+}
+
+/* TASK 36 */
+.parent-3 p {
+  background-color: #eee;
+  padding: 10px;
+  width: 350px;
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  margin: 10px auto;
+  border-left: 3px solid #e61d77;
+}
+.parent-3 p::before {
+  content: attr(data-person);
+  position: absolute;
+  background-color: #eee;
+  padding: 10px;
+  top: 0px;
+  left: -100px;
+  width: 50px;
+  text-align: center;
+}
+.parent-3 p::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  background-color: white;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #e61d77 transparent transparent;
+  left: -23px;
+}
+
+/* TASK 37 */
+.parent-4 p {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 10px auto;
+  background-color: #eee;
+  border-right: 5px solid #f83636;
+  width: 350px;
+  padding: 10px 10px 10px 50px;
+  text-align: left;
+  counter-increment: my-counter;
+  position: relative;
+}
+.parent-4 p::before {
+  content: counter(my-counter);
+  position: absolute;
+  background-color: #f83636;
+  color: white;
+  padding: 10px;
+  width: 16.5px;
+  height: 16.5px;
+  line-height: 50%;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* TASK 38 */
+.assign-1 {
+  width: 100px;
+  height: 100px;
+  border: 2px solid black;
+  border-radius: 50px;
+  display: inline-flex;
+  margin: 20px;
+  counter-increment: item;
+  position: relative;
+  background-color: #eee;
+  box-shadow: 5px 5px 0 0 #056df6eb, -5px -5px 0 0 #f605aaeb;
+  justify-content: center;
+  align-items: center;
+}
+.assign-1::after {
+  content: counter(item);
+  color: white;
+  position: absolute;
+  border-radius: 50%;
+  padding: 3px;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  top: -10%;
+  right: 40%;
+}
+.assign-1::before {
+  content: "Element";
+  font-size: 20px;
+}
+
+/* TASK 39 */
+.assign-2 {
+  margin: 10% auto;
+  background-color: #eee;
+  width: 100px;
+  height: 100px;
+  -webkit-border-radius: 10px 50px;
+  -moz-border-radius: 10px 50px;
+  border-radius: 10px 50px;
+  box-shadow: 1px 1px 10px 5px #979797 inset;
+}
+
+/* TASK 40 */
+.body-contain {
+  position: relative;
+}
+.container {
+  width: 275px;
+  height: 275px;
+  display: inline-block;
+  margin: 15px;
+  background-color: #eee;
+  border: 1px solid #eee;
+}
+.container p {
+  width: 200px;
+  display: inline-block;
+  margin: 25px;
+  background-color: #4aa1f8;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+}
+.item {
+  width: 180px;
+  height: 180px;
+  color: black;
+  position: relative;
+  background-color: #d3d0d0;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  left: 15%;
+  bottom: 10px;
+}
+.body-contain::after {
+  content: "";
+  position: absolute;
+  height: 85%;
+  top: 20px;
+  left: 36%;
+  border: 1px solid;
+  border-color: #4aa1f8;
+}
+.body-contain::before {
+  content: "or";
+  position: absolute;
+  color: white;
+  font-weight: bold;
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  left: 35%;
+  background-color: #4aa1f8;
+  border-radius: 50%;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
